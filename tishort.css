@@ -1,0 +1,199 @@
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ececec;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #ececec;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.product-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-info .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.product-info .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.product-info .slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info .prev, .product-info .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.product-info .prev {
+    left: 0;
+}
+
+.product-info .next {
+    right: 0;
+}
+
+.product-info .product-description {
+    margin-top: 20px;
+}
+
+.product-info .product-description p {
+    margin-bottom: 10px;
+}
+
+.product-info .product-description ul {
+    padding-left: 20px;
+}
+
+.product-info .product-description li {
+    margin-bottom: 5px;
+}
+
+.product-info .size,
+.product-info .color,
+.product-info .fit {
+    margin-top: 10px;
+}
+
+.product-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-info select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-info button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-info button:hover {
+    background-color: #555;
+}
+
+.suggested-products {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.suggested-products h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.suggested-products .product {
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: left;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggested-products .product img {
+    width: 100%; /* Resimlerin tam genişlikte olmasını sağlar */
+    height: auto; /* Otomatik olarak yükseklik ayarlar */
+    display: block;
+    border-radius: 8px;
+}
+
+.suggested-products .product p {
+    margin-top: 10px;
+}
+.a{
+    height: 250px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+    color: white;
+}

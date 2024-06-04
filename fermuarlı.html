@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stayfit</title>
+    <link rel="stylesheet" href="kıyafetlerinYeri.css">
+ 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Stayfit</h1>
+            <nav>
+                <ul>
+                    <div style="position: relative; right:24%; top: 2%;">
+                        <li class="dropdown-toggle"><a href="#">Tişört <span class="arrow">▼</span></a>
+                            <ul class="dropdown">
+                                <li><a href="Basic.html">Basic Tişört</a></li>
+                                <li><a href="Oversize.html">Oversize Tişört</a></li>
+                                <li><a href="Tasarım.html">Tasarım Tişört</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div style="position: relative; right: -10%; top: 2%;">
+                        <li class="dropdown-toggle"><a href="#">Hoodie <span class="arrow">▼</span></a>
+                            <ul class="dropdown">
+                                <li><a href="fermuarlı.html">Fermuarlı</a></li>
+                                <li><a href="Basic.html">Basic Hoodie</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div style="position: relative; right: 28%; top: 2%;">
+                        <li><a href="#">Sweatshirt</a></li>
+                    </div>
+                    <div style="position: relative; right: 3%; top: 2%;">
+                        <li><a href="#">Eşofman</a></li>
+                    </div>
+                    <div style="position: relative; right: 4%; top: 2%;">
+                        <li><a href="#">Canvas Tablo</a></li>
+                    </div>
+                    <div style="position: relative; right: 0%; top: 2%;">
+                        <li><a href="#">Doruk Ereşter</a></li>
+                    </div>
+                </ul>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Ürünlerde ara...">
+                <button onclick="clearSearch()">0 ürün</button>
+                <button onclick="window.location.reload();">Sayfayı Yenile</button> <!-- Yenileme butonu -->
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <section class="new-products">
+        <h2>Yeniler</h2>
+        <div class="search-results-wrapper">
+        <div id="search-results"></div>
+    <div style="position: relative;left: 32%;">
+        <div class="product-list">
+            <div class="product-category">
+                <a href="toji.html">
+                    <div class="product">
+                        <img src="toji.png" style="width: 0%;height: 0%;"><img src="toji.png">
+                        <p>Toji sweat</p>
+                        <p>500</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product-category">
+                <a href="gutsmiyamato.html">
+                    <div class="product">
+                        <img src="gutsmiyamato.png" style="width: 0%;height: 0%;"><img src="gutsmiyamato.png">
+                        <p>Guts Miyamato</p>
+                        <p>500</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product-category">
+                <a href="tishort.html">
+                    <div class="product">
+                        <a href="tishort.html"> <!-- Resmi bu linkin içine alın -->
+                            <img src="zod b ön.jpg" style="width: 0%;height: 0%;"><img src="zod b ön.jpg" alt="">
+                            <p>zod sweat</p>
+                            <p>400</p>
+                        </a>
+                    </div>
+                </a> <!-- İç içe linkler kapatılıyor -->
+            </div>
+        </div></div>
+    </section>
+    </main></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kurumsal</h3>
+                <p>Hakkımızda</p>
+            </div>
+            <div class="footer-section">
+                <h3>Üye</h3>
+                <p>Hesabım</p>
+                <p>Ödeme Sayfası</p>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p>Telefon: 0850 346 33 56</p>
+                <p>E-Posta: info@stayfit.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2020 - Stayfit</p>
+        </div>
+    </footer>
+    <script src="kıyafetlerinYeri.js"></script>
+    <script src="ana.js"></script>
+</body>
+</html>

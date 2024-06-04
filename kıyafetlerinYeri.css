@@ -1,0 +1,476 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ececec;
+}
+
+header {
+    background-color: #181818;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav  li {
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+nav  li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -200%;
+    background-color: #333;
+    list-style: none;
+
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(247, 1, 1, 0.3);
+    z-index: 1000;
+}
+
+nav ul li ul.dropdown li {
+    width: 100%;
+}
+
+nav  li ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav  li:hover ul {
+    display: inline-block;
+}
+
+nav  li ul.dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+nav  li:hover ul.dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+.arrow {
+    font-size: 0.7em;
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -200%;
+    background-color: #333;
+    list-style: none;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li ul.dropdown li {
+    width: 100%;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li.show ul.dropdown {
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.arrow {
+    font-size: 0.7em;
+    
+}
+
+.search-cart {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.search-cart input {
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    position: relative;
+    max-width: 1000px;
+}
+
+a {
+    width: 200%;
+    max-width: 800px;
+    height: auto;
+    
+    
+}
+
+.hero img {
+    width: 100%;
+    max-width: 949px;
+    height: auto;
+    position: relative;
+    left: 45%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hero img.visible {
+    opacity: 1;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.search-results-wrapper {
+    position: relative;
+}
+
+/* Arama sonuçlarının stili */
+.search-results-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.search-results {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
+
+/* Arama sonuçlarının görünür hale gelmesi */
+.show-search-results {
+    display: block !important;
+}
+
+.product-category {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Sadece boyut ve gölge için transition ekleniyor */
+}
+
+.product-category a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-category a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-category h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.new-products {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Resimleri yatayda ortalar */
+    align-items: center; /* Resimleri dikeyde ortalar */
+    margin-top: 20px; /* Ürünlerle header arasında bir boşluk bırakır */
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.a {
+    height: 250px;
+}
+.product p {
+    margin: 10px 0;
+    color: #666;
+    transition: font-size 0.3s;
+}
+.product:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.product:hover p {
+    font-size: 1.2em;
+}
+
+.product p {
+    margin: 10px 0;
+    color: #666;
+    transition: font-size 0.3s;
+}
+
+footer {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;position: relative; /* Diğer içeriklere göre pozisyonunu ayarlar */
+    margin-top: 20px;position: absolute;bottom: 0%;width: 97.8%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .new-products {
+        padding: 0 20px;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-category {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-cart {
+        flex-direction: column;
+        width: 100%;
+    }
+    .new-products {
+        padding: 0 10px;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 300px;
+    }
+    .search-cart input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .products {
+        padding: 0 10px;
+    }
+
+    .product-category {
+        padding: 0 10px;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.product-tags {
+    margin-bottom: 20px; /* Ürün etiketleri ile ürünler arasında bir boşluk bırakır */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px; /* Ürünlerle header arasında bir boşluk bırakır */
+}
+
+.product-category {
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product p {
+    margin: 10px 0;
+    color: #666;
+    transition: font-size 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.product:hover p {
+    font-size: 1.2em;
+}
+
+/* Ürün etiketlerinin pozisyonunu ayarlar */
+.product-tags {
+    position: absolute;
+    top: 90px; /* Header ile arasındaki mesafeyi ayarlar */
+    left: 0;
+}
